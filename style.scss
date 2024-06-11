@@ -1,0 +1,91 @@
+// Variables de Couleurs
+$background-color: #f0f0f0;
+$border-color: #333;
+$button-color: #fff;
+$button-hover-colors: (
+  start: #28a745,
+  stop: #dc3545,
+  reset: #6f42c1,
+);
+$font-color: #444;
+$font-family: "Arial, sans-serif";
+
+// Réinitialisation globale
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  background-color: $background-color;
+  font-family: $font-family;
+  color: $font-color;
+
+  #container {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: $font-color;
+    }
+
+    .timeContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid $border-color;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: #fafafa;
+
+      .time {
+        font-size: 70px;
+        font-weight: bold;
+        color: $border-color;
+      }
+    }
+
+    .btn {
+      margin: 10px;
+      width: 100px;
+      padding: 10px;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      background: $button-color;
+      color: $font-color;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .start:hover {
+      color: map-get($button-hover-colors, start);
+      border: 1px solid map-get($button-hover-colors, start);
+    }
+
+    .stop:hover {
+      color: map-get($button-hover-colors, stop);
+      border: 1px solid map-get($button-hover-colors, stop);
+    }
+
+    .reset:hover {
+      color: map-get($button-hover-colors, reset);
+      border: 1px solid map-get($button-hover-colors, reset);
+    }
+  }
+}
