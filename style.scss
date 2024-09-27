@@ -49,10 +49,12 @@ body {
       margin-bottom: 20px;
       background: #fafafa;
 
-      .time {
-        font-size: 70px;
-        font-weight: bold;
-        color: $border-color;
+      #time {
+        font-size: 30px;
+        font-family: "Courier New", Courier, monospace; /* Police monospace */
+        display: inline-block;
+        width: 90%; /* Fixe la largeur de l'affichage */
+        text-align: center; /* Centre le texte */
       }
     }
 
